@@ -1,5 +1,6 @@
 const corsOption = {
   origin: [
+    "*",
     "http://localhost:5173",
     "http://localhost:4173",
     process.env.CLIENT_URL,
@@ -10,4 +11,4 @@ const corsOption = {
 
 const APP_TOKEN = "secret-token";
 
-export {corsOption,APP_TOKEN};
+export { corsOption, APP_TOKEN };
