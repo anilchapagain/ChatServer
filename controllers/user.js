@@ -25,7 +25,7 @@ const result = await uploadFilesToCloudinary([file]);
 });
 
 const login = TryCatch(async (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  
   const { username, password } = req.body;
   const user = await User.findOne({ username }).select(["+password"]);
   if (!user) return next(new ErrorHandler("Invalid UserName OR Password", 404));
